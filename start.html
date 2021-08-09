@@ -1,0 +1,1124 @@
+<html>
+
+<head>
+    <title>The Earth is Warming</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            /*            overflow-x: hidden;*/
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8em;
+        }
+
+        #logo {
+            width: 300px;
+            position: fixed;
+            top: 70%;
+            left: 51%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+
+        /*Code below taken from https://loading.io/css/*/
+        #lds-roller {
+            display: inline-block;
+            position: fixed;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            color: #ffffff;
+        }
+
+        #lds-roller div {
+            animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            transform-origin: 40px 40px;
+        }
+
+        #lds-roller div:after {
+            content: " ";
+            display: block;
+            position: fixed;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #FFA902;
+            margin: -4px 0 0 -4px;
+        }
+
+        #lds-roller div:nth-child(1) {
+            animation-delay: -0.036s;
+        }
+
+        #lds-roller div:nth-child(1):after {
+            top: 63px;
+            left: 63px;
+        }
+
+        #lds-roller div:nth-child(2) {
+            animation-delay: -0.072s;
+        }
+
+        #lds-roller div:nth-child(2):after {
+            top: 68px;
+            left: 56px;
+        }
+
+        #lds-roller div:nth-child(3) {
+            animation-delay: -0.108s;
+        }
+
+        #lds-roller div:nth-child(3):after {
+            top: 71px;
+            left: 48px;
+        }
+
+        #lds-roller div:nth-child(4) {
+            animation-delay: -0.144s;
+        }
+
+        #lds-roller div:nth-child(4):after {
+            top: 72px;
+            left: 40px;
+        }
+
+        #lds-roller div:nth-child(5) {
+            animation-delay: -0.18s;
+        }
+
+        #lds-roller div:nth-child(5):after {
+            top: 71px;
+            left: 32px;
+        }
+
+        #lds-roller div:nth-child(6) {
+            animation-delay: -0.216s;
+        }
+
+        #lds-roller div:nth-child(6):after {
+            top: 68px;
+            left: 24px;
+        }
+
+        #lds-roller div:nth-child(7) {
+            animation-delay: -0.252s;
+        }
+
+        #lds-roller div:nth-child(7):after {
+            top: 63px;
+            left: 17px;
+        }
+
+        #lds-roller div:nth-child(8) {
+            animation-delay: -0.288s;
+        }
+
+        #lds-roller div:nth-child(8):after {
+            top: 56px;
+            left: 12px;
+        }
+
+        @keyframes lds-roller {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /*Code above taken from https://loading.io/css/*/
+        #bestExp {
+            color: #ffffff;
+            position: fixed;
+            top: 35%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            margin-top: 100px;
+            opacity: 0;
+        }
+
+
+        a {
+            color: #FFA902;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            border-spacing: 1px;
+            transition: 0.2s;
+            position: absolute;
+        }
+
+        a:hover {
+            border-color: #FFA902;
+        }
+
+        #warmButton {
+            position: absolute;
+            bottom: 3%;
+            right: 5%;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        #usButton {
+            position: absolute;
+            bottom: 3%;
+            right: 5%;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        #sureButton {
+            position: absolute;
+            bottom: 3%;
+            right: 5%;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        #badButton {
+            position: absolute;
+            bottom: 3%;
+            right: 5%;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        #fixButton {
+            position: absolute;
+            bottom: 3%;
+            right: 5%;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        #nowButton {
+            position: absolute;
+            bottom: 3%;
+            right: 5%;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        #startAgain {
+            position: absolute;
+            bottom: 3%;
+            right: 5%;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+
+        #startDiv {
+            margin: 0 auto;
+            text-decoration: none;
+            text-align: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            color: #ffffff;
+            font-size: 1em;
+        }
+
+        #startDiv a {
+            color: #ffffff;
+            font-size: 1.5em;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /*Code below taken from https://codepen.io/colloque/pen/bDgmx*/
+        /*
+        #startDiv a#startButton:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            height: 1em;
+            width: 100%;
+            border-bottom: 1px solid;
+            margin-top: 10px;
+            opacity: 0;
+            -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+            transition: opacity 0.5s, transform 0.5s;
+            -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+        }
+
+        #startDiv a#startButton:hover:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            border-color: #FFA902;
+        }
+        */
+        /*Code above taken from https://codepen.io/colloque/pen/bDgmx*/
+
+        #startHome {
+            color: #ffffff;
+            margin: 0 auto;
+            width: 30%;
+            padding: 0;
+            position: fixed;
+            bottom: 10%;
+            right: 5%;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #startHome a {
+            opacity: 1;
+        }
+
+        #textHead {
+            font-weight: bold;
+        }
+
+        #textHead span {
+            background-color: #0F81E8;
+            font-size: 2em;
+        }
+
+        #itsWarming {
+            color: #ffffff;
+            margin: 0 auto;
+            width: 30%;
+            padding: 0;
+            position: fixed;
+            bottom: 10%;
+            right: 5%;
+            opacity: 0;
+        }
+
+        #itsUs {
+            color: #ffffff;
+            margin: 0 auto;
+            width: 30%;
+            padding: 0;
+            position: fixed;
+            bottom: 10%;
+            right: 5%;
+            opacity: 0;
+        }
+
+        #wereSure {
+            color: #ffffff;
+            margin: 0 auto;
+            width: 30%;
+            padding: 0;
+            position: fixed;
+            bottom: 10%;
+            right: 5%;
+            opacity: 0;
+        }
+
+        #itsBad {
+            color: #ffffff;
+            bottom: 10px;
+            margin: 0 auto;
+            width: 30%;
+            padding: 0;
+            position: fixed;
+            bottom: 10%;
+            right: 5%;
+            opacity: 0;
+
+        }
+
+        #fixIt {
+            color: #ffffff;
+            margin: 0 auto;
+            width: 30%;
+            padding: 0;
+            position: fixed;
+            bottom: 10%;
+            right: 5%;
+            opacity: 0;
+        }
+
+        #whatYouDo {
+            color: #ffffff;
+            display: block;
+            margin: 0 auto;
+            padding: 0;
+            width: 30%;
+            opacity: 0;
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+        }
+
+        #whatYouDo p a {
+            color: #FFA902;
+            position: relative;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <img src="img/logo.png" id="logo">
+
+    <div id="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="bestExp">For best viewing experience, view on fullscreen browser.</div>
+
+    <div id="startDiv"><a href=# id="startButton" onclick="scene1();">start</a><br><br></div>
+
+    <!--    loading page: for best experience view on Desktop PC and full browser-->
+
+    <div id="startHome">This is our only home. And the temperature is rising.<br>
+    </div>
+
+    <a href=# id="warmButton" onclick="scene2();">It&#39;s Warming</a>
+
+    <div id="itsWarming">
+        <p id="textHead"><span>It&#39;s Warming.</span></p>
+
+        <p>Right now, annual global average temperature is about 1&#176; Celsius (1.9&#176;F) hotter than pre-industrial levels.</p>
+
+        <p>The world&#39;s scientists confirmed in the 2018 IPCC report that at the current rate, the world could cross 1.5&#176;C hotter as soon as 2030. That&#39;s only a decade from now, well within the lifespan of most people alive today.</p>
+
+        <p>1.5&#176;C might not sound like a big increase in temperature, but it&#39;s the difference between life and death for thousands of people.</p>
+
+        <p>Earth has always had natural cycles of warming and cooling, but not like we&#39;re seeing now. The top five hottest years on record are 2016, 2015, 2017, 2018, and 2014.</p>
+
+        <p>And rising temperatures doesn&#39;t only mean it&#39;s getting hotter. The Earth&#39;s climate is complex &ndash; even a small increase in average global temperature means big changes, with lots of dangerous side effects.</p>
+
+        <p>Monthly global average temperature relative to pre-industrial average. The last cooler-than-average month was in October 1965. (Climate Central)</p>
+
+    </div>
+
+    <a href=# id="usButton" onclick="scene3();">It&#39;s Us</a>
+
+    <div id="itsUs">
+        <p id="textHead"><span>It&#39;s Us.</span></p>
+
+        <p>Human beings are causing climate change, largely by burning fossil fuels.</p>
+
+        <p>Before the 18th century, when humans in the industrial west began to burn coal, oil and gas, our atmosphere typically contained about 280 parts per million of carbon dioxide. Those are the conditions &ldquo;on which civilization developed and to which life on earth is adapted.&ldquo;</p>
+
+        <p>Now, as the use of fossil fuels spreads through the world, the amount of carbon in the atmosphere is skyrocketing &ndash; we&#39;re now well over 415 parts per million of CO2 in the atmosphere.</p>
+
+        <p>Burning fossil fuels remains by far the biggest single contributor to the problem: in 2017, close to 70% of annual emissions came from fossil fuel use and other industrial processes.</p>
+
+        <p>Fossil fuel companies are taking millions of years worth of carbon, once stored beneath the earth as fossil fuels, and releasing it into the atmosphere. In 2019, CO2 concentrations crossed 415 ppm in the atmosphere for the first time in at least 2.5 million years.</p>
+
+        <p>Keeping fossil fuels in the ground is the most important step we can take to prevent further climate change.</p>
+    </div>
+
+    <a href=# id="sureButton" onclick="scene4();">We&#39;re Sure</a>
+
+    <div id="wereSure">
+        <p id="textHead"><span>We&#39;re Sure.</span></p>
+
+        <p>An overwhelming 97% of scientists agree that climate change is being caused by human greenhouse gas emissions. There is no meaningful debate about the basic science of climate change.</p>
+
+        <p>The finding that more CO2 in the atmosphere will warm the climate dates back to the 1890s. Attacks on the credibility of climate science are perpetuated by vested interests, including the fossil fuel industry, which continues to pump money into creating uncertainty about our understanding of climate change.</p>
+
+        <p>Since the 2015 Paris Agreement, the top 5 oil majors alone have spent a combined $1 billion on misleading climate-related branding and lobbying.</p>
+
+        <p>If we pay attention to what scientists and frontline communities are telling us, instead of fossil fuel industry deceptions, the message is clear:<br>Humans are causing the rapid onset of climate change, which is already bringing costly impacts across the world. The best way to stop it is by keeping fossil fuels in the ground, and accelerating a just transition to 100% renewable energy.</p>
+    </div>
+
+    <a href=# id="badButton" onclick="scene5();">It&#39;s Bad</a>
+
+    <div id="itsBad">
+        <p id="textHead"><span>It&#39;s Bad.</span></p>
+
+        <p>1&#176;C of warming has already resulted in devastating impacts across the planet.</p>
+
+        <p>Global grain yields have declined by 10% from heatwaves and floods connected to climate change, unleashing hunger and displacement.</p>
+
+        <p>Over 1 million people living near coasts have been forced from their homes due to rising seas and stronger storms, and millions more are expected to flee in the coming years.</p>
+
+        <p>The IPCC states the difference between 1.5&#176;C and 2&#176;C of global temperature rise could mean well over 10 million more migrants from sea-level rise.</p>
+
+        <p>Climate change science leaves no room for doubt. The 2018 IPCC report has confirmed what we&#39;ve known for decades: increased frequency and severity of extreme weather events is a result of climate change.</p>
+
+        <p>Our People&#39;s Dossier on 1.5&#176;C has more on why we need to stay under 1.5&#176;C.</p>
+    </div>
+
+    <a href=# id="fixButton" onclick="scene6();">We Can Fix It</a>
+
+    <div id="fixIt">
+        <p id="textHead"><span>We Can Fix It</span></p>
+
+        <p>The basic facts of climate crisis are grim: the vast majority of fossil fuel reserves need to stay in the ground for us to stay below 1.5&#176;C* of warming and fossil fuel companies aren&#39;t going to do that without a fight.</p>
+
+        <p>Here&#39;s the good news:</p>
+
+        <ul>
+            <li>We know exactly what we have to do &ndash; keep fossil fuels in the ground and quickly transition to 100% renewable energy. The science says it&#39;s still possible to stay under 1.5&#176;C &ndash; but we&#39;ll need to halve emissions by 2030, and increase the share of solar, wind and hydro energy dramatically in that time.</li>
+
+            <li>Renewable energy is getting cheaper and more popular every day. As renewables grow and provide more clean, free energy to replace fossil fuels, we&#39;ve seen emissions decrease in many countries.</li>
+
+
+            <li>We&#39;re not alone &ndash; the worldwide movement to stop the climate crisis and resist the fossil fuel industry is growing stronger every day.</li>
+        </ul>
+
+        <em>*Even if we do manage to keep most of fossil fuels in the ground, a world that&#39;s 1.5&#176;C warmer is going to be a much different, scarier place. We&#39;re only at +1&#176;C now, and we&#39;re already seeing more storms, flooding, heatwaves, drought, and island nations at risk of going underwater.</em>
+    </div>
+
+    <a href=# id="nowButton" onclick="scene7();">What you can do now</a>
+
+    <div id="whatYouDo">
+        <p id="textHead"><span>What Now?</span></p>
+
+        <p>The most important step you can take now is to join the movement making the transition from fossil fuels possible.</p>
+
+        <p><a href="https://350.org/get-involved/" target="_blank">Get Involved here</a> and we&#39;ll connect you with the people near you fighting for a just transition to 100% renewable energy.</p>
+    </div>
+
+    <a href=# id="startAgain" onclick="refreshPage();">Start Again</a>
+
+    <!--/////-->
+
+    <script src="js/three.min.js"></script>
+    <script src="js/Detector.js"></script>
+    <script src="js/ColladaLoader.js"></script>
+    <script src="js/tween.min.js"></script>
+    <script>
+        var scene, camera, renderer, controls, dae, treez, cars, carsMore, carsPile, factory, factoryMini, factoryLarge, factoryPile, wind, solar, homes, ocean, grass, ground, arctic, antarctica, startFog, hider;
+
+        function init() {
+
+            //add detector to see if WebGL is supported
+            if (!Detector.webgl) Detector.addGetWebGLMessage();
+            //set up a scene
+            scene = new THREE.Scene();
+
+            //add a camera
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            scene.add(camera);
+            //render the scene - start renderer and set it's size
+            renderer = new THREE.WebGLRenderer({
+                antialias: true
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setClearColor(0x000000, 1);
+
+            //add to webpage
+            document.body.appendChild(renderer.domElement);
+
+            var worldLight = new THREE.PointLight(0xffffff, 0.8);
+            worldLight.position.set(1100, 1500, 900);
+            camera.add(worldLight);
+
+            var amLight = new THREE.AmbientLight(0xcbcbcb, 0.5);
+            amLight.position.set(10, 10, 10);
+            scene.add(amLight);
+
+            startFog = scene.fog = new THREE.Fog(0x000000, 100, 600);
+            scene.add(startFog);
+
+            var loader = new THREE.ColladaLoader();
+            loader.options.ConvertUpAxis = true;
+            loader.load('scene2.dae', function(collada) {
+
+                dae = collada.scene;
+
+                dae.scale.x = dae.scale.y = dae.scale.z = 0.1;
+                dae.rotation.y = 2;
+                dae.rotation.x = 100;
+                dae.rotation.z = 0;
+
+                dae.updateMatrix();
+                scene.add(dae);
+
+                treez = scene.getObjectByName("tree_clones", true);
+                treez.scale.x = treez.scale.y = treez.scale.z = 0.85;
+
+                cars = scene.getObjectByName("car_clones", true);
+                cars.scale.x = cars.scale.y = cars.scale.z = 0.4;
+
+                carsMore = scene.getObjectByName("car_clones_more", true);
+                carsMore.scale.x = carsMore.scale.y = carsMore.scale.z = 0.4;
+                carsMore.visible = false;
+
+                carsPile = scene.getObjectByName("car_pile", true);
+                carsPile.scale.x = carsPile.scale.y = carsPile.scale.z = 0.7;
+                //carsPile.visible = false;
+
+                factory = scene.getObjectByName("factory_clones", true);
+                factory.scale.x = factory.scale.y = factory.scale.z = 0.8;
+                factory.visible = false;
+
+                factoryMini = scene.getObjectByName("factory_clones_mini", true);
+                factoryMini.scale.x = factoryMini.scale.y = factoryMini.scale.z = 0.8;
+                factoryMini.visible = false;
+
+                factoryLarge = scene.getObjectByName("factory_clones_large", true);
+                factoryLarge.scale.x = factoryLarge.scale.y = factoryLarge.scale.z = 0.6;
+                factoryLarge.visible = false;
+
+                factoryPile = scene.getObjectByName("factory_pile", true);
+                factoryPile.scale.x = factoryPile.scale.y = factoryPile.scale.z = 0.7;
+                //factoryPile.visible = false;
+
+                wind = scene.getObjectByName("wind_clones", true);
+                wind.scale.x = wind.scale.y = wind.scale.z = 0.4;
+                wind.visible = false;
+
+                solar = scene.getObjectByName("solar_clones", true);
+                solar.scale.x = solar.scale.y = solar.scale.z = 0.4;
+                solar.visible = false;
+
+                homes = scene.getObjectByName("home_clones", true);
+                homes.scale.x = homes.scale.y = homes.scale.z = 0.7;
+
+                ocean = scene.getObjectByName("water", true);
+
+
+                grass = scene.getObjectByName("surface_grass", true);
+                ground = scene.getObjectByName("surface_ground", true);
+
+                arctic = scene.getObjectByName("arctic", true);
+                arctic.scale.x = arctic.scale.y = arctic.scale.z = 1;
+
+                antarctica = scene.getObjectByName("antarctica", true);
+                antarctica.scale.x = antarctica.scale.y = antarctica.scale.z = 1;
+
+                render();
+            });
+
+            //position camera
+            camera.position.set(550, 550, 550);
+            camera.lookAt(scene.position);
+
+            var loadingScreen = document.getElementById("lds-roller");
+            loadingScreen.style.opacity = 1;
+            loadingScreen.style.transition = "opacity 2s ease-in-out";
+            hider = setTimeout(loadingHide1, 500);
+
+            var loadingStart = document.getElementById("startDiv");
+            loadingStart.style.opacity = 1;
+            loadingStart.style.transition = "opacity 2s ease-in-out 8s";
+
+            var loadingExp = document.getElementById("bestExp");
+            loadingExp.style.opacity = 1;
+            loadingExp.style.transition = "opacity 2s ease-in-out";
+            hider = setTimeout(loadingHide3, 500);
+
+            var loadingLogo = document.getElementById("logo");
+            loadingLogo.style.opacity = 1;
+            loadingLogo.style.transition = "opacity 2s ease-in-out";
+            hider = setTimeout(loadingHide5, 500);
+
+        }
+
+        function loadingHide1() {
+            var loadingScreen = document.getElementById("lds-roller");
+            loadingScreen.style.opacity = 0;
+            loadingScreen.style.transition = "opacity 2s ease-in-out";
+            hider = setTimeout(loadingHide2, 2000);
+        }
+
+        function loadingHide2() {
+            var loadingScreen = document.getElementById("lds-roller");
+            loadingScreen.style.display = "none";
+        }
+
+        function loadingHide3() {
+            var loadingExp = document.getElementById("bestExp");
+            loadingExp.style.opacity = 0;
+            loadingExp.style.transition = "opacity 2s ease-in-out";
+            hider = setTimeout(loadingHide4, 2000);
+        }
+
+        function loadingHide4() {
+            var loadingExp = document.getElementById("bestExp");
+            loadingExp.style.display = "none";
+        }
+
+        function loadingHide5() {
+            var loadingExp = document.getElementById("logo");
+            loadingExp.style.opacity = 0;
+            loadingExp.style.transition = "opacity 2s ease-in-out";
+            hider = setTimeout(loadingHide6, 2000);
+        }
+
+        function loadingHide6() {
+            var loadingLogo = document.getElementById("logo");
+            loadingLogo.style.display = "none";
+        }
+
+        function scene1() {
+            //start
+            var camPos = new TWEEN.Tween(camera.position).to({
+                x: 150,
+                y: 150,
+                z: 150
+            }, 4000).easing(TWEEN.Easing.Quadratic.InOut);
+            var treeScale1 = new TWEEN.Tween(treez.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 2000).easing(TWEEN.Easing.Elastic.Out);
+            var rot1 = new TWEEN.Tween(dae.rotation).to({
+                y: 20
+            }, 3990).easing(TWEEN.Easing.Quadratic.Out);
+            var homeScale1 = new TWEEN.Tween(homes.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 2000).easing(TWEEN.Easing.Elastic.Out);
+            var carScale1 = new TWEEN.Tween(cars.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 2000).easing(TWEEN.Easing.Elastic.Out);
+
+            homeScale1.delay(4000);
+            carScale1.delay(4500);
+            treeScale1.delay(3000);
+
+            homeScale1.start(), carScale1.start(), treeScale1.start();
+            camPos.start(), rot1.start();
+            camPos.chain(treeScale1);
+            //move model off to a side, include text to show earth is warming
+
+            //CSS
+            var startButton = document.getElementById("startDiv");
+            startButton.style.opacity = 0;
+            startButton.style.transition = "opacity 1s ease-in-out";
+
+            hider = setTimeout(startButtonHide, 1000);
+
+            var startHomeOpacity = document.getElementById("startHome");
+            startHomeOpacity.style.visibility = "visible";
+            startHomeOpacity.style.opacity = 1;
+            startHomeOpacity.style.transition = "opacity 2s ease-in-out 5s";
+
+            var showWarming = document.getElementById("warmButton");
+            showWarming.style.visibility = "visible";
+            showWarming.style.opacity = 1;
+            showWarming.style.transition = "opacity 2s ease-in-out 6s";
+
+
+        }
+
+        function startButtonHide() {
+            var startButton = document.getElementById("startDiv");
+            startButton.style.display = "none";
+        }
+
+        function scene2() {
+            //its warming
+            var worldPos = new TWEEN.Tween(dae.position).to({
+                X: 50,
+                y: 30,
+                z: 200
+            }, 4000).easing(TWEEN.Easing.Quadratic.InOut);
+            worldPos.start();
+            //additional text button
+            //homes and normal amount of cars
+
+            //CSS
+            var startHomeOpacity = document.getElementById("startHome");
+            startHomeOpacity.style.opacity = 0;
+            startHomeOpacity.style.transition = "opacity 1s ease-in-out";
+
+            var itsWarmOpacity = document.getElementById("itsWarming");
+            itsWarmOpacity.style.opacity = 1;
+            itsWarmOpacity.style.transition = "opacity 2s ease-in-out 4s";
+
+            var showWarming = document.getElementById("warmButton");
+            showWarming.style.visibility = "hidden";
+
+            var showUs = document.getElementById("usButton");
+            showUs.style.visibility = "visible";
+            showUs.style.opacity = 1;
+            showUs.style.transition = "opacity 2s ease-in-out 6s";
+
+        }
+
+        function scene3() {
+            //its us
+            var worldPos = new TWEEN.Tween(dae.position).to({
+                X: 0,
+                y: 0,
+                z: 0
+            }, 4000).easing(TWEEN.Easing.Quadratic.InOut);
+            var factoryScale1 = new TWEEN.Tween(factory.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 2000).easing(TWEEN.Easing.Elastic.Out);
+            var carScale1 = new TWEEN.Tween(cars.scale).to({
+                x: 0.3,
+                y: 0.3,
+                z: 0.3
+            }, 3000).easing(TWEEN.Easing.Cubic.Out);
+            var carScale2 = new TWEEN.Tween(carsMore.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 2000).easing(TWEEN.Easing.Elastic.Out);
+
+            factory.visible = true;
+            carsMore.visible = true;
+
+            carScale2.delay(4000);
+            factoryScale1.delay(4500);
+
+            worldPos.start(), factoryScale1.start(), carScale1.start(), carScale2.start();
+
+            //include smoke
+            //normal factory amount
+            //even more cars
+
+            //CSS
+            var itsWarmOpacity = document.getElementById("itsWarming");
+            itsWarmOpacity.style.opacity = 0;
+            itsWarmOpacity.style.transition = "opacity 2s ease-in-out";
+
+            var itsUsOpacity = document.getElementById("itsUs");
+            itsUsOpacity.style.opacity = 1;
+            itsUsOpacity.style.transition = "opacity 2s ease-in-out 4s";
+
+            var showUs = document.getElementById("usButton");
+            showUs.style.visibility = "hidden";
+
+            var showSure = document.getElementById("sureButton");
+            showSure.style.visibility = "visible";
+            showSure.style.opacity = 1;
+            showSure.style.transition = "opacity 2s ease-in-out 6s";
+        }
+
+        function scene4() {
+            //we're sure
+            var camPos = new TWEEN.Tween(camera.position).to({
+                x: 250,
+                y: 250,
+                z: 250
+            }, 4000).easing(TWEEN.Easing.Quadratic.InOut);
+            var worldPos = new TWEEN.Tween(dae.position).to({
+                X: 0,
+                y: 70,
+                z: 200
+            }, 4000).easing(TWEEN.Easing.Quadratic.InOut);
+            var homeScale1 = new TWEEN.Tween(homes.scale).to({
+                x: 0.7,
+                y: 0.7,
+                z: 0.7
+            }, 2000).easing(TWEEN.Easing.Cubic.In);
+            var carScale2 = new TWEEN.Tween(carsMore.scale).to({
+                x: 0.1,
+                y: 0.1,
+                z: 0.1
+            }, 2000).easing(TWEEN.Easing.Cubic.In);
+            var factoryScale1 = new TWEEN.Tween(factory.scale).to({
+                x: 0.4,
+                y: 0.4,
+                z: 0.4
+            }, 2000).easing(TWEEN.Easing.Cubic.In);
+            var factoryScale2 = new TWEEN.Tween(factoryMini.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 2000).easing(TWEEN.Easing.Elastic.Out);
+            var factoryScale3 = new TWEEN.Tween(factoryLarge.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 2000).easing(TWEEN.Easing.Elastic.Out);
+
+            factoryMini.visible = true;
+            factoryLarge.visible = true;
+
+            factoryScale2.delay(2000);
+            factoryScale3.delay(2000);
+
+            camPos.start(), worldPos.start(), homeScale1.start(), carScale2.start(), factoryScale1.start(), factoryScale2.start(), factoryScale3.start();
+            //larger and mini amounts of factories
+            //remove homes cars
+
+            //CSS
+            var itsUsOpacity = document.getElementById("itsUs");
+            itsUsOpacity.style.opacity = 0;
+            itsUsOpacity.style.transition = "opacity 2s ease-in-out";
+
+            var wereSureOpacity = document.getElementById("wereSure");
+            wereSureOpacity.style.opacity = 1;
+            wereSureOpacity.style.transition = "opacity 2s ease-in-out 4s";
+
+            var showSure = document.getElementById("sureButton");
+            showSure.style.visibility = "hidden";
+
+            var showBad = document.getElementById("badButton");
+            showBad.style.visibility = "visible";
+            showBad.style.opacity = 1;
+            showBad.style.transition = "opacity 2s ease-in-out 6s";
+        }
+
+        function scene5() {
+            //its bad
+            var factoryScale2 = new TWEEN.Tween(factoryMini.scale).to({
+                x: 0.8,
+                y: 0.8,
+                z: 0.8
+            }, 2000).easing(TWEEN.Easing.Cubic.Out);
+            var factoryScale3 = new TWEEN.Tween(factoryLarge.scale).to({
+                x: 0.0001,
+                y: 0.0001,
+                z: 0.0001
+            }, 2000).easing(TWEEN.Easing.Cubic.In);
+            var meltIce1 = new TWEEN.Tween(arctic.scale).to({
+                x: 0.9,
+                y: 0.9,
+                z: 0.9
+            }, 3000).easing(TWEEN.Easing.Quadratic.InOut);
+            var meltIce2 = new TWEEN.Tween(antarctica.scale).to({
+                x: 0.9,
+                y: 0.9,
+                z: 0.9
+            }, 3000).easing(TWEEN.Easing.Quadratic.InOut);
+            var riseWater1 = new TWEEN.Tween(ocean.scale).to({
+                x: 1.05,
+                y: 1.05,
+                z: 1.05
+            }, 2000).easing(TWEEN.Easing.Quadratic.InOut);
+            var pileCars = new TWEEN.Tween(carsPile.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 4000).easing(TWEEN.Easing.Quadratic.InOut);
+            var pileFactory = new TWEEN.Tween(factoryPile.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 4000).easing(TWEEN.Easing.Quadratic.InOut);
+
+            //factory.visible = false;
+            //factoryPile.visible = true;
+
+            //carsMore.visible = false;
+            //carsPile.visible = true;
+            meltIce1.delay(2000);
+            meltIce2.delay(2000);
+            riseWater1.delay(4000);
+            pileFactory.delay(5000);
+            pileCars.delay(5000);
+
+            pileCars.start(), pileFactory.start(), factoryScale2.start(), factoryScale3.start(), meltIce1.start(), meltIce2.start(), riseWater1.start();
+            //fires on tree cloner position?
+            //melting caps, rising sea level
+            //pan camera to the caps, reset to normal view, rising sea
+            //mountain of cars and factories, literally
+
+            //CSS
+            var wereSureOpacity = document.getElementById("wereSure");
+            wereSureOpacity.style.opacity = 0;
+            wereSureOpacity.style.transition = "opacity 2s ease-in-out";
+
+            var itsBadOpacity = document.getElementById("itsBad");
+            itsBadOpacity.style.opacity = 1;
+            itsBadOpacity.style.transition = "opacity 2s ease-in-out 6s";
+
+            var showBad = document.getElementById("badButton");
+            showBad.style.visibility = "hidden";
+
+            var showFix = document.getElementById("fixButton");
+            showFix.style.visibility = "visible";
+            showFix.style.opacity = 1;
+            showFix.style.transition = "opacity 2s ease-in-out 6s";
+        }
+
+        function scene6() {
+            //we can fix it
+            var camPos = new TWEEN.Tween(camera.position).to({
+                x: 150,
+                y: 150,
+                z: 150
+            }, 4000).easing(TWEEN.Easing.Quadratic.InOut);
+            var worldPos = new TWEEN.Tween(dae.position).to({
+                x: 0,
+                y: 0,
+                z: 0
+            }, 4000).easing(TWEEN.Easing.Quadratic.InOut);
+            var riseWater2 = new TWEEN.Tween(ocean.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 2000).easing(TWEEN.Easing.Quadratic.Out);
+            var meltIce3 = new TWEEN.Tween(arctic.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 2000).easing(TWEEN.Easing.Quadratic.Out);
+            var meltIce4 = new TWEEN.Tween(antarctica.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 2000).easing(TWEEN.Easing.Quadratic.Out);
+            var factoryScale3 = new TWEEN.Tween(factory.scale).to({
+                x: 0.4,
+                y: 0.4,
+                z: 0.4
+            }, 2000).easing(TWEEN.Easing.Quadratic.Out);
+            var solarScale1 = new TWEEN.Tween(solar.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 2000).easing(TWEEN.Easing.Elastic.Out);
+            var windScale1 = new TWEEN.Tween(wind.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 2000).easing(TWEEN.Easing.Elastic.Out);
+            var pileCars = new TWEEN.Tween(carsPile.scale).to({
+                x: 0.7,
+                y: 0.7,
+                z: 0.7
+            }, 3000).easing(TWEEN.Easing.Quadratic.InOut);
+            var pileFactory = new TWEEN.Tween(factoryPile.scale).to({
+                x: 0.7,
+                y: 0.7,
+                z: 0.7
+            }, 3000).easing(TWEEN.Easing.Quadratic.InOut);
+            var homeScale1 = new TWEEN.Tween(homes.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 2000).easing(TWEEN.Easing.Elastic.Out);
+
+            solar.visible = true;
+            wind.visible = true;
+
+            factory.visible = false;
+            factoryMini.visible = false;
+            factoryLarge.visible = false;
+
+            cars.visible = false;
+            carsMore.visible = false;
+
+            meltIce3.delay(4500);
+            meltIce4.delay(4500);
+            riseWater2.delay(4500);
+
+            factoryScale3.delay(5000);
+
+
+            homeScale1.delay(6000);
+            solarScale1.delay(6000);
+            windScale1.delay(6000);
+
+            camPos.start(), worldPos.start(), riseWater2.start(), meltIce3.start(), meltIce4.start(), factoryScale3.start(), solarScale1.start(), windScale1.start(), homeScale1.start(), pileCars.start(), pileFactory.start();
+
+            riseWater2.chain(meltIce3, meltIce4);
+            //meltIce3.chain(meltIce4);
+            meltIce4.chain(factoryScale3);
+            factoryScale3.chain(solarScale1);
+            solarScale1.chain(windScale1);
+
+            //CSS
+            var itsBadOpacity = document.getElementById("itsBad");
+            itsBadOpacity.style.opacity = 0;
+            itsBadOpacity.style.transition = "opacity 2s ease-in-out";
+
+            var fixItOpacity = document.getElementById("fixIt");
+            fixItOpacity.style.opacity = 1;
+            fixItOpacity.style.transition = "opacity 2s ease-in-out 6s";
+
+            var showFix = document.getElementById("fixButton");
+            showFix.style.visibility = "hidden";
+
+            var showNow = document.getElementById("nowButton");
+            showNow.style.visibility = "visible";
+            showNow.style.opacity = 1;
+            showNow.style.transition = "opacity 2s ease-in-out 6s";
+        }
+
+        function scene7() {
+            //CSS
+            var fixItOpacity = document.getElementById("fixIt");
+            fixItOpacity.style.opacity = 0;
+            fixItOpacity.style.transition = "opacity 2s ease-in-out";
+
+            var whatYouDoOpacity = document.getElementById("whatYouDo");
+            whatYouDoOpacity.style.opacity = 1;
+            whatYouDoOpacity.style.transition = "opacity 2s ease-in-out 2s";
+
+            var showNow = document.getElementById("nowButton");
+            showNow.style.visibility = "hidden";
+
+            var refreshOpacity = document.getElementById("startAgain");
+            refreshOpacity.style.visibility = "visible";
+            refreshOpacity.style.opacity = 1;
+            refreshOpacity.style.transition = "opacity 2s ease-in-out";
+        }
+
+        function refreshPage() {
+            location.reload();
+        }
+
+        function render() {
+            //call to render scene 60fps
+            requestAnimationFrame(render);
+
+            dae.rotation.y += 0.001;
+            //dae.rotation.z += 0.005;
+
+            wind.children[0].children[0].rotation.z += 0.02;
+            wind.children[1].children[0].rotation.z += 0.015;
+            wind.children[2].children[0].rotation.z += 0.017;
+            wind.children[3].children[0].rotation.z += 0.019;
+            wind.children[4].children[0].rotation.z += 0.012;
+            wind.children[5].children[0].rotation.z += 0.014;
+            wind.children[6].children[0].rotation.z += 0.011;
+            wind.children[7].children[0].rotation.z += 0.013;
+            wind.children[8].children[0].rotation.z += 0.018;
+            wind.children[9].children[0].rotation.z += 0.02;
+            wind.children[10].children[0].rotation.z += 0.015;
+            wind.children[11].children[0].rotation.z += 0.011;
+            wind.children[12].children[0].rotation.z += 0.013;
+            wind.children[13].children[0].rotation.z += 0.019;
+            wind.children[14].children[0].rotation.z += 0.018;
+            wind.children[15].children[0].rotation.z += 0.014;
+            wind.children[16].children[0].rotation.z += 0.012;
+            wind.children[17].children[0].rotation.z += 0.017;
+            wind.children[18].children[0].rotation.z += 0.02;
+            wind.children[19].children[0].rotation.z += 0.018;
+            wind.children[20].children[0].rotation.z += 0.017;
+            wind.children[21].children[0].rotation.z += 0.011;
+            wind.children[22].children[0].rotation.z += 0.019;
+            wind.children[23].children[0].rotation.z += 0.012;
+            wind.children[24].children[0].rotation.z += 0.014;
+            wind.children[25].children[0].rotation.z += 0.013;
+            wind.children[26].children[0].rotation.z += 0.015;
+            wind.children[27].children[0].rotation.z += 0.016;
+            wind.children[28].children[0].rotation.z += 0.02;
+            //wind.children[29].children[0].rotation.z += 0.016;
+
+
+            TWEEN.update();
+            //keep displaying scene
+            renderer.render(scene, camera);
+        }
+
+        //call the init function to run the code
+        init();
+
+    </script>
+</body>
+
+</html>
